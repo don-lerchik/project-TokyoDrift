@@ -83,7 +83,7 @@
 
     var successHandler = function (data) {
         var fragment = document.createDocumentFragment();
-        var arrData = window.filter.adFilter(data);
+        var arrData = window.filter.adFilter(data.data);
         arrData.forEach(element => {
             fragment.appendChild(window.pin.renderIcons(element));
             fragment.appendChild(window.card.renderAd(element));
@@ -129,7 +129,7 @@
             TOP: 100,
             BOTTOM: 600,
         }
-        var addressOfHouse = document.querySelector('#address');
+        var coordinateOfHouse = document.querySelector('#coordinate');
         var onMouseMove = function (moveEvt) {
             var shift = {
                 x: startCoords.x - moveEvt.clientX,
@@ -149,7 +149,7 @@
             }
             mapIconStart.style.top = finishCoords.y + 'px';
             mapIconStart.style.left = finishCoords.x + 'px';
-            addressOfHouse.value = (finishCoords.y + 64) + ' , ' + (finishCoords.x + 32);
+            coordinateOfHouse.value = (finishCoords.x + 21) + ' , ' + (finishCoords.y + 72);
         };
         var onMouseUp = function (upEvt) {
             document.removeEventListener('mousemove', onMouseMove);

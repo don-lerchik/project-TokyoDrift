@@ -3,7 +3,7 @@
     var FILE_TYPES = ['gif', 'jpeg', 'jpg', 'png'];
 
     var avatarChooser = document.querySelector('#avatar');
-    var imagesChooser = document.querySelector('#images');
+    var imagesChooser = document.querySelector('#preview');
     var avatarImage = document.querySelector('.notice__preview img');
     var imagesContainer = document.querySelector('.form__photo-container');
     var dropZone = document.querySelectorAll('.drop-zone');
@@ -46,7 +46,6 @@
     }
 
     avatarChooser.addEventListener('change', function (evt) {
-        console.log(evt.target.files);
         show(evt.target, evt.target);
     });
     imagesChooser.addEventListener('change', function (evt) {

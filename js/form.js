@@ -9,10 +9,10 @@
     };
     var priceOfHouse = document.querySelector('#price');
     var typeOfHouse = document.querySelector('#type');
-    var timeInOfHouse = document.querySelector('#timein');
-    var timeOutOfHouse = document.querySelector('#timeout');
+    var timeInOfHouse = document.querySelector('#checkin');
+    var timeOutOfHouse = document.querySelector('#checkout');
     var roomsOfHouse = document.querySelector('#room_number');
-    var questOfHouse = document.querySelector('#capacity');
+    var questOfHouse = document.querySelector('#guests');
     var capacityQuest = questOfHouse.querySelectorAll('option');
     var userForm = document.querySelector('.notice__form');
     var resetForm = document.querySelector('.form__reset');

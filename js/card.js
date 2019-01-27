@@ -5,10 +5,15 @@
     var renderAd = function (AD_OBJECT) {
         var adElement = adContent.cloneNode(true);
         adElement.classList.add('visuallyhidden');
-        adElement.querySelector('.popup__avatar').setAttribute('src', AD_OBJECT.author.avatar);
+        try {
+            var avatarPath = AD_OBJECT.author.avatar.path;
+        } catch (error) {
+            var avatarPath = '';
+        }
+        adElement.querySelector('.popup__avatar').setAttribute('src', avatarPath);
         adElement.querySelector('.popup__close').setAttribute('tabinex', '0');
         adElement.querySelector('h3').textContent = AD_OBJECT.offer.title;
-        adElement.querySelector('p small').textContent = AD_OBJECT.offer.addres;
+        adElement.querySelector('p small').textContent = AD_OBJECT.offer.adress;
         adElement.querySelector('.popup__price').innerHTML = AD_OBJECT.offer.price + '&#x20bd;/ночь';
         var typeOfHouse = function (type) {
             if (type === 'flat') {
@@ -19,6 +24,9 @@
             }
             if (type === 'bungalo') {
                 return 'бунгало'
+            }
+            if (type === 'palac') {
+                return 'дворец'
             }
         }
         adElement.querySelector('h4').textContent = typeOfHouse(AD_OBJECT.offer.type);
@@ -64,7 +72,7 @@
         AD_OBJECT.offer.photos.forEach(element => {
             var adElementPictureRooms = adPictureRooms.querySelector('li').cloneNode(true);
             adElementPictureRooms.querySelector('img').classList.add('notice__image');
-            adElementPictureRooms.querySelector('img').setAttribute('src', element);
+            adElementPictureRooms.querySelector('img').setAttribute('src', element.path);
             adElementPictureRooms.querySelector('img').style.cssText = 'width : 45px; \ height:40px;\ margin : 5px 3px\ ';
             pictureRoomsFragment.appendChild(adElementPictureRooms);
         });

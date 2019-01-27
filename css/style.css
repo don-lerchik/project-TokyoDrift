@@ -466,7 +466,9 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
 .form__element--wide {
   width: 50%;
 }
-
+.form__element--long {
+  width: 100%;
+}
 .form__element label {
   display: block;
   padding-bottom: 5px;
@@ -779,11 +781,13 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
 
 .controls {
   position: absolute;
+  z-index: 100;
   top: 50%;
   font-size: 60px;
   border: none;
   background-color: transparent;
   color: #ff5635;
+  cursor: pointer;
   transform: translateY(-50%)
 }
 
@@ -809,11 +813,13 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
 
 .close-slider {
   position: absolute;
+  z-index: 100;
   top: 0;
   right: 0;
   padding: 0;
   background: none;
   border: 0;
+  cursor: pointer;
 }
 
 .close-slider, .close-slider:visited, .close-slider:focus, .close-slider:active, .close-slider:hover {

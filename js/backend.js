@@ -1,7 +1,5 @@
 'use strict';
 (function () {
-    var URL = 'https://js.dump.academy/keksobooking';
-    var DATA = URL + '/data';
     var LOAD_TIME = 100000;
     var SUCCESS_STATUS = 200;
 
@@ -25,13 +23,13 @@
     };
     var load = function (onSuccess, onError) {
         var xhr = xhrRequest(onSuccess, onError);
-        xhr.open('GET', DATA);
+        xhr.open('GET', window.SERVER_URL_GET);
         xhr.send();
     };
 
     var save = function (data, onSuccess, onError) {
         var xhr = xhrRequest(onSuccess, onError);
-        xhr.open('POST', URL);
+        xhr.open('POST', window.SERVER_URL_POST);
         xhr.send(data);
     };
 
