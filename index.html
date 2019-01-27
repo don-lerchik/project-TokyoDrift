@@ -22,7 +22,7 @@
         </div>
 
         <button class="map__pin map__pin--main">
-          <img src="img/main-pin-image.png" width="40" height="44" draggable="false">
+          <img src="./img/main-pin-image.png" width="40" height="44" draggable="false">
           <svg viewBox="0 0 70 70">
             <defs>
               <path d="M35,35m-23,0a23,23 0 1,1 46,0a23,23 0 1,1 -46,0" id="tophalf" />
@@ -98,7 +98,7 @@
           <div class="notice__photo">
             <div class="upload">
               <div class="notice__preview">
-                <img src="img/muffin.png" alt="Аватар пользователя" width="40" height="44">
+                <img src="./img/muffin.png" alt="Аватар пользователя" width="40" height="44">
               </div>
               <input type="file" id="avatar" name="avatar">
               <label class="drop-zone" for="avatar">Загрузите или&nbsp;перетащите сюда фото</label>
@@ -235,7 +235,7 @@
       <section class="footer-logo">
         Сделано в
         <a tabindex="1" href="https://htmlacademy.ru" class="footer-logo-link">
-          <img src="img/ha-logo.png" class="footer-logo-image" width="130" alt="HTML Academy" />HTML Academy</a> &copy; 2017
+          <img src="./img/ha-logo.png" class="footer-logo-image" width="130" alt="HTML Academy" />HTML Academy</a> &copy; 2017
       </section>
       <nav class="footer-social">
         <a href="https://twitter.com/htmlacademy_ru" class="footer-social-item footer-social-item-twitter" target="_blank" rel="nofollow">Twitter</a>
@@ -249,7 +249,7 @@
 
   <template>
     <article class="map__card popup">
-      <img src="img/avatars/user01.png" class="popup__avatar" width="70" height="70">
+      <img src="./img/avatars/user01.png" class="popup__avatar" width="70" height="70">
       <button class="popup__close">Закрыть</button>
       <h3>Уютное гнездышко для молодоженов</h3>
       <p>
@@ -277,22 +277,22 @@
     </article>
 
     <button style="left: 200px; top: 400px;" class="map__pin">
-      <img src="img/avatars/user07.png" width="40" height="40" draggable="false">
+      <img src="./img/avatars/user07.png" width="40" height="40" draggable="false">
     </button>
   </template>
   <script>
-    window.SERVER_URL_GET = 'http://127.0.0.1:3000/api/offers?skip=0&limit=50';
-    window.SERVER_URL_POST = 'http://127.0.0.1:3000/api/offers';
+    window.SERVER_URL_GET = 'https://project-tokyo-drift-part2.herokuapp.com/api/offers?skip=0&limit=50';
+    window.SERVER_URL_POST = 'https://project-tokyo-drift-part2.herokuapp.com/';
   </script>
-  <script src="js/card.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/pin.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/backend.js"></script>
-  <script src="js/filter.js"></script>
-  <script src="js/picture_loader.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/drag-drop.js"></script>
+  <script src="./js/card.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/pin.js"></script>
+  <script src="./js/map.js"></script>
+  <script src="./js/backend.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/picture_loader.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/drag-drop.js"></script>
 </body>
 
 </html>
